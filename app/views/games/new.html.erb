@@ -1,0 +1,18 @@
+<h1>New Game</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+
+<div class="rack">
+  <% @letters.each do |letter|  %>
+  <div class="block">
+    <%= letter %>
+  </div>
+<% end %>
+ 
+</div>
+
+<form  id="ask-form" action="/answer" method ="get">
+  <input class="form-input" type="text" name="question" placeholder="What is your best word?">
+  <!-- can also add value = <% params[:member] %> at end of above line if you put it in nav bar for example to save value when refreshing page -->
+  <input class="submit-btn" type="submit" value ="Ask" >
+</form>
+   
